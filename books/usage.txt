@@ -1,0 +1,29 @@
+
+
+usage: books.py [-h] [-title S [S ...]] [-author S [S ...]] [-year Y Y]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -title S [S ...], --title S [S ...]
+                        Given a search string S, print a list of books
+                        limitted by those whose titles contain S (case-
+                        insensitive)
+  -author S [S ...], --author S [S ...]
+                        Given a search string S, print a list of authors whose
+                        names contain S (case-insensitive). For each such
+                        author, print a list of the author's books.
+  -year Y Y, --year Y Y
+                        Given a range of years A to B, print a list of books
+                        published between years A and B, inclusive.
+
+example: python3 books.py -t james -a etienne -y 1990 2000
+example: python3 books.py -a etienne -y 1900 2000 -t james
+example: python3 books.py -t james etienne -a "etienne james" -y 1990 2000
+example: python3 books.py -t "james etienne" -a etienne james -y 1990 2000
+example: python3 books.py -t etienne
+example: python3 books.py -a james
+example: python3 books.py -y 2000 1990
+example: python3 books.py -y 2000 2000  
+
+
+    
