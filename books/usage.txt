@@ -1,4 +1,4 @@
-
+# James Marlin and Etienne Richart
 
 usage: books.py [-h] [-title S [S ...]] [-author S [S ...]] [-year Y Y]
 

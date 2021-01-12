@@ -1,3 +1,5 @@
+# James Marlin and Etienne Richart
+
 import argparse
 import csv
 
@@ -50,6 +52,3 @@ if (args.year is not None):
 
 for x in range(len(bookset)):
     print(bookset[x])
-
-
-    
