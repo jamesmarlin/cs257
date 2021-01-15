@@ -22,7 +22,7 @@ class Book:
         self.title = title.casefold()
         self.year = int(year)
     def __str__(self):
-        return(self.title + " ; " + self.author + " ; " + str(self.year))
+        return(self.title + "; " + self.author + "; " + str(self.year))
 
 bookset = set()
 
@@ -37,18 +37,27 @@ if (args.title is not None):
     title = " ".join(st.strip().casefold() for st in args.title)
     temp = [x for x in bookset if title in x.title]
     bookset = temp
-    
-
-if (args.author is not None):
-    author = " ".join(st.strip().casefold() for st in args.author)
-    temp = [x for x in bookset if author in x.author]
-    bookset = temp
 
 if (args.year is not None):
     start = min(args.year)
     end = max(args.year)
     temp = [x for x in bookset if x.year >= start and x.year <= end]
-    bookset = temp
+    bookset = temp    
 
-for x in range(len(bookset)):
-    print(bookset[x])
+if (args.author is not None):
+    author = " ".join(st.strip().casefold() for st in args.author)
+    auths = dict()
+    for x in bookset:
+        if author in x.author:
+            if x.author in auths:
+                auths[x.author].append(x)
+            else:
+                auths[x.author] = [x]
+    for auth in auths:
+        print(auth)
+        for entry in auths[auth]:
+            print("\t" + entry.title + "; " + str(entry.year))
+        print()
+else:
+    for x in range(len(bookset)):
+        print(bookset[x])
