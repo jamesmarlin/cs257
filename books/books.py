@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 # James Marlin and Etienne Richart
 
+=======
+#created by Etienne Richart and James Marlin
+#using flags, you will find the author, name, and year of release of any book listed inside books.csv
+>>>>>>> Stashed changes
 import argparse
 import csv
 
@@ -44,6 +49,7 @@ if (args.year is not None):
     temp = [x for x in bookset if x.year >= start and x.year <= end]
     bookset = temp    
 
+<<<<<<< Updated upstream
 if (args.author is not None):
     author = " ".join(st.strip().casefold() for st in args.author)
     auths = dict()
@@ -61,3 +67,5 @@ if (args.author is not None):
 else:
     for x in range(len(bookset)):
         print(bookset[x])
+=======
+>>>>>>> Stashed changes
