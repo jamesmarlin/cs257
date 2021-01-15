@@ -1,10 +1,6 @@
-<<<<<<< Updated upstream
-# James Marlin and Etienne Richart
-
-=======
 #created by Etienne Richart and James Marlin
 #using flags, you will find the author, name, and year of release of any book listed inside books.csv
->>>>>>> Stashed changes
+
 import argparse
 import csv
 
