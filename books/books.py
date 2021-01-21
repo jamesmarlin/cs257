@@ -1,8 +1,10 @@
-#created by Etienne Richart and James Marlin
-#using flags, you will find the author, name, and year of release of any book listed inside books.csv
+# Authors: Etienne Richart and James Marlin
+# Revised by: Etienne Richart and James Marlin
+# Using flags, you will find the author, name, and year of release of any book listed inside books.csv
 
 import argparse
 import csv
+import sys
 
 # Class of books to maintain a books, author, title and publication year
 class Book:
@@ -27,7 +29,7 @@ def build_parser():
 def has_arguments(args, parser):
     if (args.year is None and args.title is None and args.author is None):
         error = parser.parse_args(['-h'])
-        print(error, file=st.error)
+        print(error, file=sys.stderr)
         quit()
 
 # Goes through books.csv and splits each section to access arguments
