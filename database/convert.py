@@ -7,14 +7,16 @@ def athlete():
       athlete_reader = csv.reader(csv_file, delimiter =',', quotechar= '|')
       next(athlete_reader)
       for row in athlete_reader:
-          ID = row[0]
+          ID = int(row[0])
           names = row[1]
           sex = row[2]
-          weight = row[4]
+          weight = int(row[4])
           if ID not in athletes_dict:
             #athletes_dict[ID] = len(athletes_dict) + 1
             athletes_dict[ID] = [names, sex, weight]
-      writer=csv.writer(open('athletes.csv','w'))
+      field_names = ['ID', 'Name', 'Sex', 'Weight']
+      writer=csv.writer(open('athletes.csv','w', fieldnames=fieldname))
+      writer.writeheader()
       for key in athletes_dict:
         row = [key, athletes_dict[key][0], athletes_dict[key][1], athletes_dict[key][2]]
         writer.writerow(row)
@@ -25,18 +27,19 @@ def athlete():
         #writer.writerow(row)
   return
 
-#def age:
-  #age_dict = {}
-  #with open('athlete_events.csv', newline='')
-   # age_reader = csv.reader(csv_file, delimiter = '', quotechar= ' ')
-    #ID = 1
-    #for row in age_reader:
-     # age = row[3]
-      #height = row[4]
-      #if age not in age_dict:
-       # age_dict[ID] = 
-     # else:
-#return
+def age:
+  age_dict = {}
+  with open('athlete_events.csv', newline='') as csv_file:
+    age_reader = csv.reader(csv_file, delimiter = '', quotechar= ' ')
+    for row in age_reader:
+      age = row[3]
+      height = row[4]
+      if age not in age_dict:
+        age_dict[age] = [height]
+        
+      else:
+        
+return
 
 def main():
   athlete()
