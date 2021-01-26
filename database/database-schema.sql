@@ -11,15 +11,14 @@ CREATE TABLE age(
     height integers,
 );
 
-CREATE TABLE games(
+CREATE TABLE events(
     id integers,
-    sport text,
-    games text,
-    medal text,
-    team text,
-    event text,
-    city text,
+    events text,
+    sports text,
+    season text,
 );
+
+
 
 CREATE TABLE NOC (
     id integers,
@@ -27,10 +26,20 @@ CREATE TABLE NOC (
     region text,
 );
 
-CREATE TABLE athletes_age_games_noc(
+CREATE TABLE athletes_age (
+    id integers,
     athletes_id integers,
     age_id integers,
-    games_id integers,
+    years integers,
+    team text,
+    city text,
+
+);
+
+CREATE TABLE athletes_age_games_noc(
+    athletes_age_id integers,
     NOC_id integers,
-)
+    events_id integers,
+    medal text,
+);
 
