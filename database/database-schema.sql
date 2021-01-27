@@ -1,45 +1,35 @@
 CREATE TABLE athletes (
-    id integers,
+    id INT,
     names text,
     sex text,
-    weight integers,
+    weight INT,
 );
 
-CREATE TABLE age(
-    id integers,
-    age integers,
-    height integers,
-);
+CREATE TABLE games(
+    id INT,
+    years INT,
+    season text,
+    city text,
+)
 
 CREATE TABLE events(
-    id integers,
+    id INT,
     events text,
     sports text,
-    season text,
 );
 
 
-
-CREATE TABLE NOC (
-    id integers,
+CREATE TABLE athletes_games (
+    id INT,
+    athletes_id INT,
+    games_id INT,
     NOC text,
-    region text,
-);
-
-CREATE TABLE athletes_age (
-    id integers,
-    athletes_id integers,
-    age_id integers,
-    years integers,
     team text,
-    city text,
-
 );
 
-CREATE TABLE athletes_age_games_noc(
-    athletes_age_id integers,
-    NOC_id integers,
-    events_id integers,
+CREATE TABLE athletes_total(
+    athletes_games_id INT,
+    events INT,
     medal text,
 );
 
