@@ -1,3 +1,5 @@
+#Eric Gassel and James Marlin
+
 import csv
 
 def write_dictionaries():
