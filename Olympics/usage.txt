@@ -1,0 +1,20 @@
+# BY JAMES MARLIN
+
+usage: olympics.py [-h] --NOC S [S ...] --medal S [S ...] --weight S [S ...]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -NOC S [S ...], --NOC S [S ...]
+                        Using a S input, prints out a list of athletes from the given region
+  -MEDAL S [S ...], --medal S [S ...]
+                        Using a S input, prints out a list of in descending order of medals from the specified NOC
+  -WEIGHT S [S ...], --weight S [S ...]
+                        Using a S input, prints out a list of athletes with the specified weight
+
+#Order of flags can be different
+#You do not have to use all three arguments
+
+
+
+
+    
