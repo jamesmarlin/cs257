@@ -1,0 +1,40 @@
+/*
+    By James Marlin
+    Styling for index.html
+*/
+
+body {
+    margin: 20px;
+}
+
+#panels {
+    height: 500px;
+    width: 100%;
+}
+
+#top_panel {
+    width: 95%;
+    height: 30%;
+    float:top;
+    font-size: 24pt;
+    color: white;
+    background-color: #a24fb0;
+}
+
+#right_panel {
+    width: 75%;
+    height: 70%;
+    float: right;
+    color: white;
+    background-color: #5eae51;
+    background: url("image/Leorio.jpg") center center;
+    background-size: 125px 50px;
+}
+
+#left_panel {
+    width: 20%;
+    height: 70%;
+    float: left;
+    color: white;
+    background-color: #29a197;    
+}
