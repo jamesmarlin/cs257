@@ -2,20 +2,20 @@ CREATE TABLE athletes (
     id INT,
     names text,
     sex text,
-    weight INT,
+    weight INT
 );
 
 CREATE TABLE games(
     id INT,
     years INT,
     season text,
-    city text,
-)
+    city text
+);
 
 CREATE TABLE events(
     id INT,
     events text,
-    sports text,
+    sports text
 );
 
 
@@ -24,12 +24,12 @@ CREATE TABLE athletes_games (
     athletes_id INT,
     games_id INT,
     NOC text,
-    team text,
+    team text
 );
 
 CREATE TABLE athletes_total(
     athletes_games_id INT,
     events INT,
-    medal text,
+    medal text
 );
 
